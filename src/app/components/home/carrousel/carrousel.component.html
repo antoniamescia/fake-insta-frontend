@@ -1,0 +1,7 @@
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let post of posts">
+    <div class="picsum-img-wrapper" >
+      <app-user-post [post]="post"></app-user-post>
+    </div>
+  </ng-template>
+</ngb-carousel>

@@ -1,0 +1,18 @@
+<div class="search-view">
+  <div class="container">
+    <h1 class="title">Search</h1>
+    <div class="search-bar">
+      <app-searchbar (event)="showResults($event)"></app-searchbar>
+    </div>
+    <div class="all-results">ALL RESULTS</div>
+    <div class="gridPosts">
+      <div class="container">
+        <div class="row row-cols-3 row-cols-lg-4 g-lg-3">
+          <div class="col" *ngFor="let item of results">
+            <img class="post" src="{{ item.imageUrl }}" alt="img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

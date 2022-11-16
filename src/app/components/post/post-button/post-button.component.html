@@ -1,0 +1,45 @@
+<div class="container">
+  <form
+    #postForm="ngForm"
+    (ngSubmit)="onSubmit(postForm.value, postForm)"
+    enctype="multipart/form-data"
+  >
+    <input
+      type="text"
+      name="caption"
+      class="form-control"
+      placeholder="Descripción"
+      ngModel
+    />
+    <input
+      type="text"
+      name="searchTerm"
+      class="form-control"
+      placeholder="Hashtag"
+      ngModel
+    />
+    <div class="buttons">
+      <input
+        type="file"
+        name="image"
+        value=""
+        accept="image/*"
+        id="file"
+        (change)="onFileSelected($event)"
+        ngModel
+      />
+      <input
+        type="submit"
+        value="Submit"
+        [disabled]="isLoading"
+        [disabled]="!file"
+      />
+      <span
+        class="spinner-border spinner-border-sm"
+        role="status"
+        aria-hidden="true"
+        *ngIf="isLoading"
+      ></span>
+    </div>
+  </form>
+</div>

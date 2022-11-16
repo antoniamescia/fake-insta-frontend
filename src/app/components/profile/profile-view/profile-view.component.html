@@ -1,0 +1,6 @@
+<div class="container" *ngIf="user">
+    <app-user-info-profile [user]="user"></app-user-info-profile>
+    <app-reusable-button text="follow {{ user.firstName}}" class="follow"></app-reusable-button>
+    <app-reusable-button text="message" class="message"></app-reusable-button>
+    <app-profile-grid [user]="user"></app-profile-grid>
+</div>

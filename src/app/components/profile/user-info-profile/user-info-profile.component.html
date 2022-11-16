@@ -1,0 +1,9 @@
+<div class="profile-header" *ngIf="user">
+    <div class="avatar">
+        <img src=" {{ user.profilePictureUrl }}" alt="">
+    </div>
+    <div class="user-info">
+        <div class="name">{{ user.firstName }}</div>
+        <div class="location"> Montevideo, UY </div>
+    </div>
+</div>

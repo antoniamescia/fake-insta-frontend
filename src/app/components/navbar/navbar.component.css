@@ -1,0 +1,35 @@
+nav {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: white;
+
+  box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(13.5914px);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 375px;
+    height: 50px;
+}
+
+a:link {color: black;}      /* unvisited link */
+a:visited {color: black;}   /* visited link */
+a:hover {color: black;}     /* mouse over link */
+a:active {color: #FF00D6}   
+a:hover, .active-link {
+    color: #FF00D6;
+}
+
+@media (max-width: 844px) {
+  .nav {
+    width: 100%;
+
+  }
+}

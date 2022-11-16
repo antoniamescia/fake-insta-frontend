@@ -1,0 +1,8 @@
+<div class="container" *ngIf="post">
+    <div>
+     <img src="{{ post.imageUrl }}" alt="" class="post">
+    </div>
+    <div class="user">
+        <app-user-info [postedBy]="post.postedBy" class="user-details"></app-user-info>
+    </div>
+</div> 
